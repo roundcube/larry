@@ -145,7 +145,8 @@ function rcube_mail_ui()
         .addEventListener('menu-save', save_listoptions)
         .addEventListener('enable-command', enable_command)
         .addEventListener('responseafterlist', function(e){ switch_view_mode(rcmail.env.threading ? 'thread' : 'list', true) })
-        .addEventListener('responseaftersearch', function(e){ switch_view_mode(rcmail.env.threading ? 'thread' : 'list', true) });
+        .addEventListener('responseaftersearch', function(e){ switch_view_mode(rcmail.env.threading ? 'thread' : 'list', true) })
+        .addEventListener('beforetoggle_status', function(uid){ if (rcmail.message_list.rows[uid].deleted) { rcmail.mark_message('undelete', uid); return false; } }); // Roundcube core uses the delete field for undelete action
 
       var dragmenu = $('#dragmessagemenu');
       if (dragmenu.length) {

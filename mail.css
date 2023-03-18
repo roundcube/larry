@@ -364,6 +364,11 @@ table.messagelist.fixedcopy {
 	background: url(images/listicons.png) -100px 0 no-repeat;
 }
 
+.messagelist tr td.flags span.delete
+{
+	display: none; /* todo */
+}
+
 .messagelist tbody tr .attachment span.attachment {
 	background-position: 0 -996px;
 }
