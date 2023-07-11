@@ -1457,7 +1457,6 @@ body.status-flagged .flag-icon {
 
 .widescreen .messagelist td.subject {
 	width: 99%;
-	white-space: wrap;
 	position: relative; /* for span.date positioning in Firefox */
 }
 
